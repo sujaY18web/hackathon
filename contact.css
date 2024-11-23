@@ -1,0 +1,209 @@
+/* General Styles */
+/* General Reset */
+body, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #774caf;
+    color: white;
+    padding: 10px 20px;
+}
+.navbar .logo a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+.nav-links li {
+    position: relative;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.nav-links a:hover {
+    background-color: white;
+    color: #604caf;
+    border-radius: 5px;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #dddddd;
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+}
+.dropdown-menu a {
+    color: #7f4caf;
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.dropdown-menu a:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Show Dropdown on Hover */
+.nav-links li:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Responsive Navbar (Optional) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.hamburger span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .hamburger {
+        display: flex;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    background-color: #11c7f0;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Contact Form Section */
+.contact-form-section {
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(13, 204, 233);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form-section h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px;
+    background-color: #f21fcf;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Technical Team Section */
+.technical-team {
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.technical-team h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.technical-team ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.technical-team li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+footer {
+    background-color: #af4c78;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

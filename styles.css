@@ -1,0 +1,191 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f7f7f7;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d87f0;
+    padding: 10px 20px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links li {
+    display: inline-block;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* Media Queries for Responsive Navbar */
+@media screen and (max-width: 768px) {
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #2d87f0;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: space-around;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease-in;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .navbar .hamburger {
+        display: flex;
+    }
+}
+
+/* File Safety Checker Styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #2d87f0;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* File Upload Section */
+.upload-section {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+button.submit-btn {
+    background-color: #2d87f0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #1a66c4;
+}
+
+/* Result Section */
+#result {
+    margin-top: 20px;
+}
+
+.result-message {
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    max-width: 100%;
+    width: auto;
+    background-color: #f1f1f1;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.result-message.safe {
+    background-color: #a4e48a;
+    color: #2d7f3e;
+}
+
+.result-message.unsafe {
+    background-color: #f8c0c0;
+    color: #e73d3d;
+}
+
+.result-message.warning {
+    background-color: #ffcc66;
+    color: #8a6d3b;
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #777;
+}
